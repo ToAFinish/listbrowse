@@ -1,0 +1,5 @@
+<apex:page 
+  standardController="MyObject__c" 
+  showHeader="false">
+    <taf_listbrowse:ListBrowseClassic />
+</apex:page>

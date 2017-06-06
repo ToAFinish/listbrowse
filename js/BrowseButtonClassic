@@ -1,0 +1,16 @@
+var rowIdsArray = {!GETRECORDIDS($ObjectType.Office__c)}; 
+if (rowIdsArray.length == 0) 
+{ 
+alert("Please select at least one office.") 
+} 
+else 
+{ 
+var rowIds = ""; 
+for(var i=0; i<rowIdsArray.length; i++) 
+{ 
+rowIds += rowIdsArray[i] + "$"; 
+} 
+rowIds = rowIds.substring(0, rowIds.length - 1); 
+var currentUrl = window.location.href; 
+window.location = "/apex/taf_listbrowse__ListBrowse?rids=" + rowIds + "&retUrl=" + currentUrl; 
+}

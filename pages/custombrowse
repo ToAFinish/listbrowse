@@ -1,0 +1,7 @@
+<apex:page 
+  standardController="MyObject__c" 
+  recordSetVar="accounts" 
+  extensions="taf_listbrowse.PassSelectedRecordsExt" 
+  showHeader="false" 
+  action="{!createListRecord}">
+</apex:page>
